@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head lang="us"><title>My Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Static Navbar</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@500&amp;display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --><link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Slide Show</title>
+
+    <style>
+        #slider {
+            width: 100%;
+            height: 500px;
+           
+            position: relative;
+           
+        }
+
+        #slider .slides-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #slider .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            
+        }
+
+        #slider .slide:first-child {
+            display: block;
+        }
+
+        #slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        
+
+        #slider .arrows a {
+            position: absolute;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.65);
+            top: 43%;
+            left: 15px;
+            font-weight: 400;
+            line-height: 1;
+            font-size: 42px;
+        }
+
+        #slider .arrows a:hover {
+            color: #fff;
+
+        }
+
+        #slider .arrows a.next {
+            left: initial;
+            right: 15px;
+        }
+        .w
+        {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            background-color:transparent;
+            border: 1px solid black;
+            margin:.5%;
+            position: relative;
+            cursor: pointer;display: inline-block;     
+        }.active{
+            background-color: white;
+        }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: yellow;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+    </style>
+</head>
+<body>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand" style="font-size: 40px;font-family: 'Big Shoulders Inline Text', cursive; color: #ff00ff">Oslo</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+            <div class="navbar-nav ml-auto">
+              <div class="collapse navbar-collapse" id="navbarCollapse" style="float:right;">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link active" style="color: #ff00ff">Features</a>
+                <a href="#" class="nav-item nav-link" style="color: #ff00ff">Reviews</a>
+                <a href="#" class="nav-item nav-link" style="color: #ff00ff;">Services</a>
+                
+            </div>
+                <button style="border-radius: 20px; background-color:#ff00ff; height: 35px; width: 100px;"><a href="#" class="nav-item nav-link" style="color: white;">Sign Up</a></button>
+            </div>
+        </div>
+    </nav>
+
+<div id="slider">
+        <div class="slides-container">
+            <div class="slide" id="s1"><img src="a1.jpg" alt="1" >
+              <div class="centered">Unleash your Potential</div></div>
+            <div class="slide" id="s2"><img src="a2.jpg" alt="2" >  <div class="centered"> Oslo Services</div></div>
+            <div class="slide" id="s3"><img src="a3.jpg" alt="3" > <div class="centered">Oslo Image</div></div>
+        </div>
+
+        <div class="arrows">
+            <a class="prev" href="#" style="background-color: grey;border-radius: 25%; padding:0.5%"><i class="fas fa-arrow-left"></i></a>
+            <a class="next" href="#" style="background-color: grey;border-radius: 25%; padding:0.5%"><i class="fas fa-arrow-right"></i></a>
+        </div>
+    <div style="text-align: center;">
+        <div class="w" id="1"></div>
+       
+        <div class="w" id="2"></div>
+        
+        <div class="w" id="3"></div>
+       
+    </div>
+</div>
+<div class="row-sm-12" style="margin-top: 5%;">
+  <div class="col-sm-6">
+    <div class="card" style="border:none;">
+      <div class="card-body"> 
+        <h5 class="card-title" style="color:#ff00ff; font-size: 30px;font-family:American Typewriter, serif;"> We all want our <br>jobs to run <br>smoothly</h5>
+        <p class="card-text" style=" font-size:15px;">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary" style="border-radius:25px;background-color:#ff00ff;color: white;float: right;">Get Started </a>
+      </div>
+    </div>
+  </div>
+<div class="col-sm-6">
+    <div class="card" style="border:none;margin-top:10px;">
+      <div class="card-body">
+        
+       <div> <img src="laugh.jpg" style=" border-top-right-radius: 150px;border-bottom-right-radius: 150px;border-bottom-left-radius: 50px;border-top-left-radius: 50px;height: 200px;width: 65%;margin-top: 20px;background-size:cover;" class="card-img-top">
+        <div style="border:3px solid #ff00ff;border-top-right-radius: 150px;border-bottom-right-radius: 150px;border-bottom-left-radius: 50px;border-top-left-radius: 50px; position: absolute;left:40px;top:0px;z-index:1;height:90%;width: 60%;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid" style="padding-top:5%; max-width:100%;">
+  <p style="text-align: center;font-size: 40px; color:#ff00ff;font-family:American Typewriter, serif;">Be on the Same Page</p>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="border: none;">
+      <div class="card-body">
+        <i class="fa fa-list" style="text-align: center;margin-left: 45%;font-size: 50px;color:#ff00ff;"></i>
+              
+              <p style="font-size: 20px;text-align: center;color:#ff00ff;">Stay organized</p>
+              <p style="text-align: center;">A organization should be organized.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4" style=" ">
+    <div class="card" style="border: none;">
+      <div class="card-body" style="text-align: center;">
+       <i class="fa fa-male" style=" text-align: center; font-size: 50px;color:#ff00ff;"></i>
+              <p style="font-size: 20px;text-align: center;color:#ff00ff;">Be more productive</p>
+              <p style="text-align: center;">A organization should be productive.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4" style="">
+    <div class="card" style="border: none;">
+      <div class="card-body">
+        <i class="fa fa-users" style="margin-left: 45%; text-align:center;font-size: 50px;color:#ff00ff;"></i>
+              <p style="font-size: 20px;text-align: center; color: #ff00ff;">Be more productive</p>
+              <p style="text-align: center;">A organization should be productive.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row-sm-12">
+  
+<div class="col-sm-6">
+    <div class="card" style="border:none;margin-top:10px;">
+      <div class="card-body">
+        
+       <div> <img src="laugh.jpg" style=" border-top-right-radius: 150px;border-bottom-right-radius: 150px;border-bottom-left-radius: 50px;border-top-left-radius: 50px;height: 200px;width: 65%;margin-top: 20px;background-size:cover;" class="card-img-top">
+        <div style="border:3px solid #ff00ff;border-top-right-radius: 150px;border-bottom-right-radius: 150px;border-bottom-left-radius: 50px;border-top-left-radius: 50px; position: absolute;left:40px;top:0px;z-index:1;height:90%;width: 60%;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="col-sm-6" style="padding: 10px;">
+    <div class="card" style="border:none;">
+      <div class="card-body"> 
+        <h5 class="card-title" style="color:#ff00ff; font-size: 30px;font-family:American Typewriter, serif;"> We all want our <br>jobs to run <br>smoothly</h5>
+        <p class="card-text" style=" font-size:15px;">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary" style="border-radius:25px;background-color:#FA3434; float: right;">Get Started </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleSlidesOnly1" class="carousel slide pointer-event" data-ride="carousel">
+  <div class="carousel-inner" style="background-color:#FDF5E6;">
+    <div class="carousel-item active" style="background-color:#FDF5E6">
+
+            <h1 style="text-align: center; font-size:40px;font-family:American Typewriter, serif; color:#ff00ff;">Everything Works better if it looks better</h1>
+        <img src="System1.png" class="d-block w-100" alt="..."><br>
+        <p style="text-align: center; padding-bottom: 50px;">Large or small screens, and resized windows will create different results.With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.The browser will automatically remove any extra spaces and lines when the page is displayed.Large or small screens, and resized windows will create different results.With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.The browser will automatically remove any extra spaces and lines when the page is displayed.</p>
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+      <h1 style="text-align: center; font-size:40px;font-family:American Typewriter, serif; color:#ff00ff;;">Everything Works <br>better if it looks better</h1>
+  <div class="card-deck">
+  <div class="card">
+
+    <img class="card-img-top" src="mark.jpeg" alt="Card image cap">
+
+    <div class="card-body">
+
+      <h2 class="card-title" style="color:#ff00ff;;">Mark Zuckerberg </h2>
+      <p class="card-text">
+
+Mark Elliot Zuckerberg (/ˈzʌkərbɜːrɡ/; born May 14, 1984) is an American media magnate, internet entrepreneur, and philanthropist. He is known for co-founding Facebook, Inc. and serves as its chairman, chief executive officer, and controlling shareholder.</p>
+<p>
+<span class="badge badge-primary" style="background-color:#ff00ff;"><a href="#" style="color: white;">Read More..</a></span></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="jackma.png" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title" style="color:#ff00ff;">JackMa</h2>
+      <p class="card-text">Jack Ma, or Mǎ Yún (Chinese: 马云; [mà y̌n]; born 10 September 1964), is a Chinese business magnate, investor and philanthropist. He is the co-founder and former executive chairman of Alibaba Group, a multinational technology conglomerate. Ma is a strong proponent of an open and market-driven economy.</p><p>
+<span class="badge badge-primary" style="background-color:#ff00ff;;"><a href="#" style="color:white;">Read More..</a></span></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="tsundar.jpg" alt="Card image cap">
+    <div class="card-body"><br>
+      <h2 class="card-title" style="color:#ff00ff;">Sundar Pichai</h2>
+      <p class="card-text">Pichai Sundararajan (born June 10, 1972[4]), known as Sundar Pichai (/ˈsʊndɑːr pɪˈtʃaɪ/), is an Indian-American business executive.[5] He is the chief executive officer (CEO) of Alphabet Inc. and its subsidiary Google.
+
+Born in Madurai, India.</p>
+<p>
+<span class="badge badge-primary" style="background-color:#ff00ff;"><a href="#" style="color: white;">Read More..</a></span></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="p-3 mb-2 bg-gradient-danger text-white" style="background: linear-gradient(to right, #ff00ff 0%, #ff0066 100%);height: 100px; "><button style="border-radius: 50px; float: right;color:#ff00ff;height: 40px;">Sign Up Today</button><h4>Did you want to be notified when we launch?</h4></div>
+
+
+
+<div class="card bg-dark text-gradient">
+  <img src="cover.jpg" class="card-img" style="opacity: 0.4;height: 500px; ">
+  <div class="card-img-overlay">
+    <div class="row">
+    <div class="col-md-6">
+      <h3 style="color:#ff00ff;">Sign Up Form</h3>
+     <p style="color: white; text-align:justify;">CEDCOSS, conceived and conceptualized in 2010 by co-founders Himanshu Rauthan and Abhishek Jaiswal is a leading solutions provider working across verticals to accelerate smooth digital transformation. The venture has managed to reach heights with the support of dedicated professionals aimed at delivering best in class IT solutions.</p>
+        
+    </div>
+    
+   <div class="col-md-6" style="float:right;text-align:left;">
+    <form action="" class="form-horizontal"> 
+        <div class="form-group has-success"> 
+            <div class="col-sm-6"> 
+              <label style="color: white;"> Name:</label>
+                <input class="form-control" type="text" placeholder="Enter your Name" style="border-radius: 10px;"> 
+            </div> 
+        </div> 
+        <div class="form-group has-success"> 
+            <div class="col-sm-6"> 
+              <label style="color: white;"> Email-Id:</label>
+                <input class="form-control" type="email" placeholder="Enter your Email-Id" style="border-radius: 10px;"> 
+            </div> 
+        </div> 
+        <div class="form-group has-success"> 
+            <div class="col-sm-6"> 
+              <label style="color: white;">Moblie No.:</label>
+                <input class="form-control" type="Number" placeholder="Enter your mobile no." style="border-radius: 10px;"> 
+            </div> 
+        </div> 
+          <div class="form-group has-success"> 
+            <div class="col-sm-6"> 
+                <button type="button" class="btn btn-success" style="text-align:center; border-radius: 20px; height: 40px; width:100px;">Login</button> 
+            </div> 
+        </div> 
+    </form> 
+</div>
+  </div> 
+  </div>
+</div>
+<footer class="mainfooter" role="contentinfo" style="font-size: 20px;">
+  <div class="footer-middle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+            <div class="footer-pad">
+          <h4> <a href="#" class="navbar-brand" style="font-size: 40px;font-family: 'Big Shoulders Inline Text', cursive; color: #ff00ff">Oslo</a></h4>
+     </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Reviews</a></li>
+                        <li><a href="#">FAQs</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        
+      </div>
+      <div class="col-md-3">
+        <h4>Follow Us:</h4>
+          
+             <a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+             <a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="icotwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                  
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-md-12 copy">
+      <p class="text-center">Copyright 2018-Cedcoss Technologies Pvt. Ltd.  All rights reserved.</p>
+    </div>
+  </div>
+  </div>
+  </div>
+</footer>
+</div>
+ 
+    <script>
+        
+    function f1(element) { 
+        var $this = $(element);
+        var b = $this.children('.slides-container');
+        var a = b.children('.slide');
+        var d = $this.children('.arrows');
+        var prevSlide = d.children('.prev');
+        var nextSlide = d.children('.next');
+        var slidesCount = a.length;
+        var cs = a.first();
+        var index = 1;
+        
+        
+     
+        function fadeNext() {
+            cs.removeClass('active').fadeOut(700);
+
+            if(index == slidesCount) {
+                cs = a.first();
+                cs.delay(500).addClass('active').fadeIn(700);
+                index = 1;
+            } else {
+                index++;
+                cs = cs.next();
+                cs.delay(500).addClass('active').fadeIn(700);
+            }
+        }
+        function fadePrev() {
+            cs.removeClass('active').fadeOut(700);
+
+            if(index == 1) {
+                cs = a.last();
+                cs.delay(500).addClass('active').fadeIn();
+                index = slidesCount;
+            } else {
+                index--;
+                cs = cs.prev();
+                cs.delay(500).addClass('active').fadeIn(700);
+            }
+
+        }
+
+        $(nextSlide).click(function(e) {
+            
+            fadeNext();
+        });
+        $(prevSlide).click(function(e) {
+            fadePrev();
+        });
+       $(document).ready(function(){
+    setInterval(fadeNext,5000);
+
+    
+   });
+     $("#2").click(function(){
+
+        $("#s1").css("display","none");
+         $("#s2").css("display","block");
+         $("#s3").css("display","none");
+         $("#2").addClass("active","");
+          $("#1").removeClass("active","");
+          $("#3").removeClass("active","");
+      });
+     $("#3").click(function(){
+        $("#s1").css("display","none");
+        $("#s2").css("display","none");
+         $("#s3").css("display","block");
+         $("#3").addClass("active","");
+          $("#1").removeClass("active","");
+          $("#2").removeClass("active","");
+      });
+     $("#1").click(function(){
+        $("#s2").css("display","none");
+        $("#s3").css("display","none");
+         $("#s1").css("display","block");
+         $("#1").addClass("active","");
+          $("#2").removeClass("active","");
+          $("#3").removeClass("active","");
+      });
+    }
+
+
+    $(function() {
+      f1('#slider', true, 1000);
+    });
+   
+    </script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</body>
+</html>
